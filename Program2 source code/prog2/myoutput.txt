@@ -1,0 +1,684 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< storm.book:Getting-Started >---------------------
+[INFO] Building Getting-Started 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:3.0.0:java (default-cli) @ Getting-Started ---
+0    [TopologyMain.main()] INFO  backtype.storm.zookeeper  - Starting inprocess zookeeper at port 2181 and dir /tmp/0d2725a3-cf8d-42be-8914-c533f88ddc83
+164  [TopologyMain.main()] INFO  backtype.storm.daemon.nimbus  - Starting Nimbus with conf {"topology.fall.back.on.java.serialization" true, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "nimbus.monitor.freq.secs" 10, "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "storm.local.dir" "/tmp/f60ed7e2-72bc-41be-9dbf-4a407b3dd8ce", "supervisor.worker.start.timeout.secs" 240, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "storm.zookeeper.port" 2181, "transactional.zookeeper.port" nil, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "supervisor.enable" true, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.worker.childopts" nil, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "task.heartbeat.frequency.secs" 3, "topology.max.spout.pending" nil, "storm.zookeeper.retry.interval" 1000, "supervisor.slots.ports" [6700 6701 6702 6703], "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 1, "supervisor.childopts" "-Xmx1024m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "nimbus.task.timeout.secs" 30, "drpc.invocations.port" 3773, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "topology.ackers" 1, "storm.cluster.mode" "local", "topology.optimize" true, "topology.max.task.parallelism" nil}
+193  [TopologyMain.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl  - Starting
+230  [TopologyMain.main()-EventThread] INFO  backtype.storm.zookeeper  - Zookeeper state update: :connected:none
+249  [TopologyMain.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl  - Starting
+276  [TopologyMain.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl  - Starting
+281  [TopologyMain.main()-EventThread] INFO  backtype.storm.zookeeper  - Zookeeper state update: :connected:none
+290  [TopologyMain.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl  - Starting
+295  [TopologyMain.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl  - Starting
+303  [TopologyMain.main()-EventThread] INFO  backtype.storm.zookeeper  - Zookeeper state update: :connected:none
+308  [TopologyMain.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl  - Starting
+327  [TopologyMain.main()] INFO  backtype.storm.daemon.supervisor  - Starting Supervisor with conf {"topology.fall.back.on.java.serialization" true, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "nimbus.monitor.freq.secs" 10, "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "storm.local.dir" "/tmp/ac991a35-6ff8-48f8-a9a8-d861a8c9b17a", "supervisor.worker.start.timeout.secs" 240, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "storm.zookeeper.port" 2181, "transactional.zookeeper.port" nil, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "supervisor.enable" true, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.worker.childopts" nil, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "task.heartbeat.frequency.secs" 3, "topology.max.spout.pending" nil, "storm.zookeeper.retry.interval" 1000, "supervisor.slots.ports" (1 2 3), "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 1, "supervisor.childopts" "-Xmx1024m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "nimbus.task.timeout.secs" 30, "drpc.invocations.port" 3773, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "topology.ackers" 1, "storm.cluster.mode" "local", "topology.optimize" true, "topology.max.task.parallelism" nil}
+329  [TopologyMain.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl  - Starting
+333  [TopologyMain.main()-EventThread] INFO  backtype.storm.zookeeper  - Zookeeper state update: :connected:none
+341  [TopologyMain.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl  - Starting
+379  [TopologyMain.main()] INFO  backtype.storm.daemon.supervisor  - Starting supervisor with id 85082ae0-f86d-4717-b808-6d9f90129958 at host cssmpi1h.uwb.edu
+382  [TopologyMain.main()] INFO  backtype.storm.daemon.supervisor  - Starting Supervisor with conf {"topology.fall.back.on.java.serialization" true, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "nimbus.monitor.freq.secs" 10, "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "storm.local.dir" "/tmp/d4f2613a-ebb7-43e9-afe1-0132b73cd256", "supervisor.worker.start.timeout.secs" 240, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "storm.zookeeper.port" 2181, "transactional.zookeeper.port" nil, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "supervisor.enable" true, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.worker.childopts" nil, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "task.heartbeat.frequency.secs" 3, "topology.max.spout.pending" nil, "storm.zookeeper.retry.interval" 1000, "supervisor.slots.ports" (4 5 6), "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 1, "supervisor.childopts" "-Xmx1024m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "nimbus.task.timeout.secs" 30, "drpc.invocations.port" 3773, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "topology.ackers" 1, "storm.cluster.mode" "local", "topology.optimize" true, "topology.max.task.parallelism" nil}
+383  [TopologyMain.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl  - Starting
+403  [TopologyMain.main()-EventThread] INFO  backtype.storm.zookeeper  - Zookeeper state update: :connected:none
+407  [TopologyMain.main()] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl  - Starting
+427  [TopologyMain.main()] INFO  backtype.storm.daemon.supervisor  - Starting supervisor with id 97725050-8c6e-41dc-8e15-3667e841fcff at host cssmpi1h.uwb.edu
+463  [TopologyMain.main()] INFO  backtype.storm.daemon.nimbus  - Received topology submission for Getting-Started-Toplogie with conf {"topology.ackers" 1, "topology.kryo.register" nil, "topology.name" "Getting-Started-Toplogie", "storm.id" "Getting-Started-Toplogie-1-1620441303", "FlightsFile" "src/main/resources/flights.txt", "topology.debug" false, "topology.max.spout.pending" 1, "FlightCodeData" "src/main/resources/AirlineCode.txt", "AirportsData" "src/main/resources/airports.txt"}
+521  [TopologyMain.main()] INFO  backtype.storm.daemon.nimbus  - Task Getting-Started-Toplogie-1-1620441303:1 timed out
+522  [TopologyMain.main()] INFO  backtype.storm.daemon.nimbus  - Task Getting-Started-Toplogie-1-1620441303:2 timed out
+522  [TopologyMain.main()] INFO  backtype.storm.daemon.nimbus  - Task Getting-Started-Toplogie-1-1620441303:3 timed out
+523  [TopologyMain.main()] INFO  backtype.storm.daemon.nimbus  - Task Getting-Started-Toplogie-1-1620441303:4 timed out
+525  [TopologyMain.main()] INFO  backtype.storm.daemon.nimbus  - Reassigning Getting-Started-Toplogie-1-1620441303 to 1 slots
+525  [TopologyMain.main()] INFO  backtype.storm.daemon.nimbus  - Reassign ids: [1 2 3 4]
+525  [TopologyMain.main()] INFO  backtype.storm.daemon.nimbus  - Available slots: (["97725050-8c6e-41dc-8e15-3667e841fcff" 4] ["97725050-8c6e-41dc-8e15-3667e841fcff" 5] ["97725050-8c6e-41dc-8e15-3667e841fcff" 6] ["85082ae0-f86d-4717-b808-6d9f90129958" 1] ["85082ae0-f86d-4717-b808-6d9f90129958" 2] ["85082ae0-f86d-4717-b808-6d9f90129958" 3])
+527  [TopologyMain.main()] INFO  backtype.storm.daemon.nimbus  - Setting new assignment for storm id Getting-Started-Toplogie-1-1620441303: #:backtype.storm.daemon.common.Assignment{:master-code-dir "/tmp/f60ed7e2-72bc-41be-9dbf-4a407b3dd8ce/nimbus/stormdist/Getting-Started-Toplogie-1-1620441303", :node->host {"97725050-8c6e-41dc-8e15-3667e841fcff" "cssmpi1h.uwb.edu"}, :task->node+port {4 ["97725050-8c6e-41dc-8e15-3667e841fcff" 4], 3 ["97725050-8c6e-41dc-8e15-3667e841fcff" 4], 2 ["97725050-8c6e-41dc-8e15-3667e841fcff" 4], 1 ["97725050-8c6e-41dc-8e15-3667e841fcff" 4]}, :task->start-time-secs {1 1620441304, 2 1620441304, 3 1620441304, 4 1620441304}}
+535  [TopologyMain.main()] INFO  backtype.storm.daemon.nimbus  - Activating Getting-Started-Toplogie: Getting-Started-Toplogie-1-1620441303
+547  [Thread-4] INFO  backtype.storm.daemon.supervisor  - Downloading code for storm id Getting-Started-Toplogie-1-1620441303 from /tmp/f60ed7e2-72bc-41be-9dbf-4a407b3dd8ce/nimbus/stormdist/Getting-Started-Toplogie-1-1620441303
+555  [Thread-4] INFO  backtype.storm.daemon.supervisor  - Finished downloading code for storm id Getting-Started-Toplogie-1-1620441303 from /tmp/f60ed7e2-72bc-41be-9dbf-4a407b3dd8ce/nimbus/stormdist/Getting-Started-Toplogie-1-1620441303
+565  [Thread-9] INFO  backtype.storm.daemon.supervisor  - Downloading code for storm id Getting-Started-Toplogie-1-1620441303 from /tmp/f60ed7e2-72bc-41be-9dbf-4a407b3dd8ce/nimbus/stormdist/Getting-Started-Toplogie-1-1620441303
+568  [Thread-9] INFO  backtype.storm.daemon.supervisor  - Finished downloading code for storm id Getting-Started-Toplogie-1-1620441303 from /tmp/f60ed7e2-72bc-41be-9dbf-4a407b3dd8ce/nimbus/stormdist/Getting-Started-Toplogie-1-1620441303
+594  [Thread-10] INFO  backtype.storm.daemon.supervisor  - Launching worker with assignment #:backtype.storm.daemon.supervisor.LocalAssignment{:storm-id "Getting-Started-Toplogie-1-1620441303", :task-ids (4 3 2 1)} for this supervisor 97725050-8c6e-41dc-8e15-3667e841fcff on port 4 with id 11a4362f-1202-4b71-bc02-dddcbeb75b4b
+597  [Thread-10] INFO  backtype.storm.daemon.worker  - Launching worker for Getting-Started-Toplogie-1-1620441303 on 97725050-8c6e-41dc-8e15-3667e841fcff:4 with id 11a4362f-1202-4b71-bc02-dddcbeb75b4b and conf {"topology.fall.back.on.java.serialization" true, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "nimbus.monitor.freq.secs" 10, "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "storm.local.dir" "/tmp/d4f2613a-ebb7-43e9-afe1-0132b73cd256", "supervisor.worker.start.timeout.secs" 240, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "storm.zookeeper.port" 2181, "transactional.zookeeper.port" nil, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "supervisor.enable" true, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.worker.childopts" nil, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "task.heartbeat.frequency.secs" 3, "topology.max.spout.pending" nil, "storm.zookeeper.retry.interval" 1000, "supervisor.slots.ports" (4 5 6), "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 1, "supervisor.childopts" "-Xmx1024m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "nimbus.task.timeout.secs" 30, "drpc.invocations.port" 3773, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "topology.ackers" 1, "storm.cluster.mode" "local", "topology.optimize" true, "topology.max.task.parallelism" nil}
+597  [Thread-10] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl  - Starting
+605  [Thread-10-EventThread] INFO  backtype.storm.zookeeper  - Zookeeper state update: :connected:none
+610  [Thread-10] INFO  com.netflix.curator.framework.imps.CuratorFrameworkImpl  - Starting
+684  [Thread-10] INFO  backtype.storm.daemon.task  - Loading task flightsData-reader:4
+712  [Thread-10] INFO  backtype.storm.daemon.task  - Opening spout flightsData-reader:4
+716  [Thread-10] INFO  backtype.storm.daemon.task  - Opened spout flightsData-reader:4
+734  [Thread-10] INFO  backtype.storm.daemon.task  - Finished loading task flightsData-reader:4
+734  [Thread-18] INFO  backtype.storm.daemon.task  - Activating spout flightsData-reader:4
+738  [Thread-10] INFO  backtype.storm.daemon.task  - Loading task airline-sorter:3
+763  [Thread-10] INFO  backtype.storm.daemon.task  - Preparing bolt airline-sorter:3
+764  [Thread-10] INFO  backtype.storm.daemon.task  - Prepared bolt airline-sorter:3
+766  [Thread-10] INFO  backtype.storm.daemon.task  - Finished loading task airline-sorter:3
+768  [Thread-10] INFO  backtype.storm.daemon.task  - Loading task hub-identifier:2
+780  [Thread-10] INFO  backtype.storm.daemon.task  - Preparing bolt hub-identifier:2
+796  [Thread-10] INFO  backtype.storm.daemon.task  - Prepared bolt hub-identifier:2
+810  [Thread-10] INFO  backtype.storm.daemon.task  - Finished loading task hub-identifier:2
+812  [Thread-10] INFO  backtype.storm.daemon.task  - Loading task __acker:1
+851  [Thread-10] INFO  backtype.storm.daemon.task  - Preparing bolt __acker:1
+866  [Thread-10] INFO  backtype.storm.daemon.task  - Prepared bolt __acker:1
+867  [Thread-10] INFO  backtype.storm.daemon.task  - Finished loading task __acker:1
+880  [Thread-10] INFO  backtype.storm.daemon.worker  - Worker has topology config {"storm.id" "Getting-Started-Toplogie-1-1620441303", "topology.fall.back.on.java.serialization" true, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "nimbus.monitor.freq.secs" 10, "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "storm.local.dir" "/tmp/d4f2613a-ebb7-43e9-afe1-0132b73cd256", "supervisor.worker.start.timeout.secs" 240, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "FlightCodeData" "src/main/resources/AirlineCode.txt", "storm.zookeeper.port" 2181, "transactional.zookeeper.port" nil, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "supervisor.enable" true, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.name" "Getting-Started-Toplogie", "topology.worker.childopts" nil, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "task.heartbeat.frequency.secs" 3, "topology.max.spout.pending" 1, "AirportsData" "src/main/resources/airports.txt", "storm.zookeeper.retry.interval" 1000, "supervisor.slots.ports" (4 5 6), "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.kryo.register" nil, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 1, "supervisor.childopts" "-Xmx1024m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "nimbus.task.timeout.secs" 30, "drpc.invocations.port" 3773, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "topology.ackers" 1, "storm.cluster.mode" "local", "topology.optimize" true, "topology.max.task.parallelism" nil, "FlightsFile" "src/main/resources/flights.txt"}
+880  [Thread-10] INFO  backtype.storm.daemon.worker  - Worker 11a4362f-1202-4b71-bc02-dddcbeb75b4b for storm Getting-Started-Toplogie-1-1620441303 on 97725050-8c6e-41dc-8e15-3667e841fcff:4 has finished loading
+5565 [TopologyMain.main()] INFO  backtype.storm.daemon.nimbus  - Shutting down master
+5570 [TopologyMain.main()] INFO  backtype.storm.daemon.nimbus  - Shut down master
+5577 [TopologyMain.main()] INFO  backtype.storm.daemon.supervisor  - Shutting down supervisor 85082ae0-f86d-4717-b808-6d9f90129958
+5577 [Thread-6] INFO  backtype.storm.util  - Async loop interrupted!
+5578 [Thread-7] INFO  backtype.storm.util  - Async loop interrupted!
+5578 [Thread-8] INFO  backtype.storm.util  - Async loop interrupted!
+5579 [Thread-4] INFO  backtype.storm.event  - Event manager interrupted
+5579 [Thread-5] INFO  backtype.storm.event  - Event manager interrupted
+5581 [TopologyMain.main()] INFO  backtype.storm.daemon.supervisor  - Shutting down 97725050-8c6e-41dc-8e15-3667e841fcff:11a4362f-1202-4b71-bc02-dddcbeb75b4b
+5581 [TopologyMain.main()] INFO  backtype.storm.process-simulator  - Killing process 2bc2f59a-2c12-404e-845d-db71801d6820
+5581 [TopologyMain.main()] INFO  backtype.storm.daemon.worker  - Shutting down worker Getting-Started-Toplogie-1-1620441303 97725050-8c6e-41dc-8e15-3667e841fcff 4
+5582 [TopologyMain.main()] INFO  backtype.storm.daemon.task  - Shutting down task Getting-Started-Toplogie-1-1620441303:4
+5582 [Thread-16] INFO  backtype.storm.util  - Async loop interrupted!
+5588 [TopologyMain.main()] INFO  backtype.storm.daemon.task  - Shut down task Getting-Started-Toplogie-1-1620441303:4
+5589 [TopologyMain.main()] INFO  backtype.storm.daemon.task  - Shutting down task Getting-Started-Toplogie-1-1620441303:3
+5589 [Thread-20] INFO  backtype.storm.util  - Async loop interrupted!
+-- Flight Counter [airline-sorter-3] --
+At Airport: DEN(Denver)
+            JZA: 1
+            UAL: 4
+            LOF: 1
+            FFT: 1
+            N85: 1
+            N52: 1
+            SWA: 5
+            AAL: 1
+            SKW: 3
+            total #flights = 18
+
+At Airport: HOU(Houston)
+            N19: 1
+            N72: 1
+            SWA: 4
+            MLN: 1
+            total #flights = 7
+
+At Airport: DFW(Dallas-Fort Worth)
+            UAL: 1
+            DLH: 1
+            ASH: 3
+            NKS: 1
+            BOE: 1
+            AAL: 6
+            SWA: 3
+            EMD: 1
+            SKW: 2
+            DAL: 2
+            QXE: 1
+            total #flights = 22
+
+At Airport: SMF(Sacramento)
+            UAL: 1
+            SWA: 1
+            AAL: 1
+            SKW: 1
+            total #flights = 4
+
+At Airport: IAD(Washington)
+            UAL: 5
+            RPA: 1
+            N73: 1
+            AAL: 1
+            N97: 1
+            DAL: 3
+            FFT: 1
+            EDV: 1
+            BAW: 1
+            ROU: 1
+            SWA: 1
+            EJA: 1
+            VIR: 1
+            total #flights = 19
+
+At Airport: STL(St Louis)
+            N47: 1
+            BKN: 1
+            FFT: 1
+            N50: 1
+            N72: 1
+            N95: 1
+            SWA: 2
+            N20: 1
+            total #flights = 9
+
+At Airport: PHL(Philadelphia)
+            DLH: 1
+            ENY: 1
+            GAJ: 1
+            RPA: 1
+            ASH: 1
+            N92: 1
+            PJC: 1
+            SWA: 2
+            N22: 1
+            total #flights = 10
+
+At Airport: BWI(Baltimore)
+            UAL: 1
+            685: 1
+            ICL: 1
+            N30: 1
+            SWA: 1
+            JBU: 1
+            AAL: 2
+            LXJ: 1
+            total #flights = 9
+
+At Airport: SNA(Santa Ana)
+            UAL: 2
+            AIJ: 1
+            AAL: 2
+            JBU: 1
+            CPZ: 1
+            GTI: 1
+            SKW: 2
+            DAL: 1
+            total #flights = 11
+
+At Airport: PDX(Portland)
+            N80: 1
+            N82: 1
+            N52: 2
+            N74: 1
+            N63: 1
+            N98: 1
+            N53: 2
+            N56: 1
+            DAL: 2
+            N89: 1
+            N44: 1
+            N19: 1
+            SWA: 2
+            SKW: 1
+            total #flights = 18
+
+At Airport: LAS(Las Vegas)
+            N91: 2
+            EDG: 1
+            AAL: 2
+            CPZ: 1
+            N31: 1
+            N23: 2
+            DAL: 2
+            WJA: 1
+            ASA: 1
+            N22: 1
+            N13: 1
+            N38: 1
+            NKS: 2
+            SWA: 1
+            SKW: 2
+            total #flights = 21
+
+At Airport: SEA(Seattle)
+            DLH: 1
+            UAL: 1
+            N92: 1
+            N70: 1
+            N95: 1
+            N73: 1
+            N51: 1
+            AAL: 1
+            N97: 1
+            N23: 1
+            DAL: 1
+            N34: 1
+            N12: 1
+            N67: 1
+            ASA: 1
+            N36: 1
+            N16: 1
+            CAP: 1
+            N15: 1
+            N29: 1
+            N28: 1
+            QXE: 1
+            total #flights = 22
+
+At Airport: RDU(Raleigh/Durham)
+            GJS: 1
+            N17: 1
+            N60: 1
+            N82: 1
+            AAL: 1
+            N86: 1
+            N42: 1
+            N75: 1
+            DAL: 1
+            total #flights = 9
+
+At Airport: BOS(Boston)
+            JZA: 1
+            CHH: 1
+            N63: 1
+            KAP: 3
+            SWA: 2
+            JBU: 1
+            total #flights = 9
+
+At Airport: MSP(Minneapolis)
+            N57: 1
+            NKS: 1
+            N63: 1
+            N41: 1
+            N62: 1
+            SWA: 1
+            SKW: 6
+            DAL: 3
+            N78: 1
+            N33: 1
+            total #flights = 17
+
+At Airport: BNA(Nashville)
+            N16: 1
+            JIA: 1
+            EDV: 1
+            total #flights = 3
+
+At Airport: DCA(Washington)
+            UAL: 3
+            UCA: 1
+            FFT: 1
+            EDV: 1
+            BAW: 1
+            ROU: 1
+            SWA: 2
+            AAL: 2
+            EJA: 1
+            VIR: 1
+            DAL: 2
+            N22: 1
+            total #flights = 17
+
+At Airport: LGA(New York)
+            UAL: 7
+            AFL: 1
+            N30: 1
+            AAL: 1
+            N32: 1
+            DAL: 2
+            SWR: 1
+            ENY: 4
+            N35: 1
+            UCA: 1
+            OPT: 1
+            EDV: 2
+            PWA: 1
+            JBU: 1
+            SWA: 2
+            SKW: 1
+            total #flights = 28
+
+At Airport: TPA(Tampa)
+            UAL: 1
+            N70: 1
+            AAL: 2
+            N10: 1
+            N20: 1
+            N53: 1
+            N23: 1
+            DAL: 3
+            N12: 1
+            N25: 1
+            ENY: 1
+            CAP: 1
+            FFT: 1
+            AAY: 1
+            SWA: 1
+            EJA: 1
+            total #flights = 19
+
+At Airport: SLC(Salt Lake City)
+            AAL: 1
+            SWA: 1
+            SKW: 2
+            total #flights = 4
+
+At Airport: OAK(Oakland)
+            UAL: 4
+            FFT: 1
+            N81: 1
+            FDX: 1
+            JBU: 1
+            SWA: 3
+            AAL: 3
+            DAL: 3
+            ASA: 1
+            total #flights = 18
+
+At Airport: DTW(Detroit)
+            GJS: 1
+            JIA: 1
+            EDV: 1
+            N81: 1
+            NKS: 1
+            FDX: 1
+            AAL: 1
+            DAL: 3
+            SKW: 2
+            total #flights = 12
+
+At Airport: IAH(Houston)
+            DLH: 1
+            UAL: 3
+            NKS: 1
+            BAW: 1
+            AAL: 1
+            AFR: 1
+            ASQ: 1
+            total #flights = 9
+
+At Airport: MCI(Kansas City)
+            ENY: 1
+            N49: 1
+            N40: 1
+            N21: 1
+            SWA: 3
+            AAL: 1
+            DAL: 1
+            SKW: 1
+            N44: 1
+            total #flights = 11
+
+At Airport: FLL(Fort Lauderdale)
+            UAL: 1
+            N81: 2
+            N80: 1
+            PTP: 1
+            273: 1
+            N27: 1
+            810: 1
+            JBU: 6
+            SWA: 1
+            SDU: 1
+            N50: 1
+            N52: 1
+            N76: 1
+            183: 1
+            AAL: 3
+            N31: 1
+            DAL: 3
+            N77: 2
+            N99: 1
+            N13: 1
+            N35: 1
+            N16: 2
+            N38: 1
+            N15: 2
+            N37: 1
+            N17: 1
+            NKS: 2
+            total #flights = 41
+
+At Airport: LAX(Los Angeles)
+            N80: 1
+            CMP: 1
+            AAL: 7
+            CPZ: 1
+            KLM: 1
+            DAL: 1
+            CAL: 1
+            N58: 1
+            N13: 1
+            N15: 1
+            ANA: 1
+            NKS: 1
+            SWA: 2
+            JBU: 1
+            SKW: 1
+            total #flights = 22
+
+At Airport: EWR(Newark)
+            UAL: 11
+            AFL: 1
+            DAL: 1
+            SWR: 1
+            ENY: 4
+            N35: 1
+            UCA: 1
+            EDV: 4
+            NKS: 1
+            PWA: 1
+            JBU: 1
+            SWA: 2
+            EJA: 1
+            SKW: 1
+            ASQ: 1
+            total #flights = 32
+
+At Airport: SFO(San Francisco)
+            UAL: 4
+            COO: 1
+            FFT: 1
+            N81: 2
+            FDX: 1
+            SWA: 3
+            AAL: 3
+            DAL: 3
+            ASA: 1
+            total #flights = 19
+
+At Airport: MCO(Orlando)
+            DLH: 1
+            N61: 1
+            N83: 1
+            N62: 1
+            N84: 1
+            ASA: 1
+            N7Z: 1
+            N25: 1
+            ENY: 1
+            N48: 1
+            EDV: 1
+            SWA: 4
+            JBU: 1
+            CON: 1
+            N94: 1
+            N51: 2
+            AAL: 3
+            DAL: 4
+            N11: 1
+            N14: 1
+            N37: 1
+            N18: 1
+            N39: 1
+            N17: 2
+            N19: 1
+            total #flights = 35
+
+At Airport: CLE(Cleveland)
+            UAL: 1
+            LOF: 1
+            RPA: 1
+            N90: 1
+            PHM: 1
+            CGH: 1
+            SWA: 2
+            N98: 1
+            total #flights = 9
+
+At Airport: ORD(Chicago)
+            LOT: 1
+            UAL: 5
+            RPA: 1
+            AIJ: 1
+            AAL: 2
+            SWA: 2
+            N21: 1
+            EJA: 3
+            SKW: 2
+            DAL: 1
+            ASQ: 1
+            total #flights = 20
+
+At Airport: CLT(Charlotte)
+            N35: 1
+            JIA: 1
+            FDX: 1
+            AAL: 2
+            total #flights = 5
+
+At Airport: MIA(Miami)
+            DLH: 1
+            UAL: 1
+            N80: 1
+            N61: 1
+            N62: 1
+            PTP: 1
+            273: 1
+            ENY: 1
+            810: 1
+            JBU: 5
+            SWA: 1
+            N50: 1
+            N52: 1
+            N51: 1
+            AVA: 1
+            AAL: 5
+            N76: 1
+            183: 1
+            DAL: 1
+            N99: 1
+            N13: 1
+            N35: 2
+            N38: 1
+            N16: 1
+            N15: 1
+            N37: 1
+            NKS: 2
+            GTI: 1
+            total #flights = 38
+
+At Airport: HNL(Honolulu)
+            N48: 1
+            JAL: 1
+            BAD: 1
+            KAL: 1
+            N80: 1
+            N42: 1
+            N11: 2
+            N77: 1
+            total #flights = 9
+
+At Airport: SAN(San Diego)
+            VOI: 1
+            UAL: 1
+            FFT: 1
+            N28: 1
+            RCH: 1
+            N95: 1
+            AAL: 3
+            SWA: 2
+            SKW: 3
+            DAL: 1
+            total #flights = 15
+
+At Airport: JFK(New York)
+            UAL: 6
+            AFL: 1
+            N32: 1
+            DAL: 2
+            SWR: 1
+            ENY: 4
+            N35: 1
+            AUI: 1
+            EDV: 4
+            PWA: 1
+            JBU: 1
+            SWA: 1
+            SKW: 1
+            total #flights = 25
+
+At Airport: PHX(Phoenix)
+            N81: 1
+            N70: 1
+            N83: 2
+            N60: 1
+            MSQ: 1
+            N96: 1
+            AAL: 3
+            WJA: 1
+            N35: 3
+            N18: 1
+            N17: 1
+            ASH: 1
+            SWA: 6
+            OXF: 2
+            EJA: 2
+            NDU: 4
+            total #flights = 31
+
+At Airport: ATL(Atlanta)
+            N13: 1
+            ROU: 1
+            SWA: 1
+            AAL: 1
+            DAL: 1
+            N89: 1
+            total #flights = 6
+
+At Airport: MDW(Chicago)
+            LOT: 1
+            UAL: 5
+            ENY: 1
+            RPA: 1
+            AIJ: 1
+            SCX: 1
+            AAL: 2
+            SWA: 2
+            N21: 1
+            EJA: 2
+            SKW: 1
+            ASQ: 1
+            total #flights = 19
+
+At Airport: AUS(Austin)
+            OPT: 1
+            FFT: 1
+            SWA: 1
+            AAL: 1
+            EJA: 1
+            DAL: 1
+            total #flights = 6
+
+5620 [TopologyMain.main()] INFO  backtype.storm.daemon.task  - Shut down task Getting-Started-Toplogie-1-1620441303:3
+5620 [TopologyMain.main()] INFO  backtype.storm.daemon.task  - Shutting down task Getting-Started-Toplogie-1-1620441303:2
+5621 [Thread-22] INFO  backtype.storm.util  - Async loop interrupted!
+5624 [TopologyMain.main()] INFO  backtype.storm.daemon.task  - Shut down task Getting-Started-Toplogie-1-1620441303:2
+5624 [TopologyMain.main()] INFO  backtype.storm.daemon.task  - Shutting down task Getting-Started-Toplogie-1-1620441303:1
+5624 [Thread-24] INFO  backtype.storm.util  - Async loop interrupted!
+5627 [TopologyMain.main()] INFO  backtype.storm.daemon.task  - Shut down task Getting-Started-Toplogie-1-1620441303:1
+5627 [TopologyMain.main()] INFO  backtype.storm.daemon.worker  - Terminating zmq context
+5627 [TopologyMain.main()] INFO  backtype.storm.daemon.worker  - Disconnecting from storm cluster state context
+5627 [TopologyMain.main()] INFO  backtype.storm.daemon.worker  - Waiting for heartbeat thread to die
+5627 [Thread-27] INFO  backtype.storm.util  - Async loop interrupted!
+5627 [Thread-28] INFO  backtype.storm.util  - Async loop interrupted!
+5628 [Thread-15] INFO  backtype.storm.util  - Async loop interrupted!
+5628 [Thread-14] INFO  backtype.storm.event  - Event manager interrupted
+5631 [TopologyMain.main()] INFO  backtype.storm.daemon.worker  - Shut down worker Getting-Started-Toplogie-1-1620441303 97725050-8c6e-41dc-8e15-3667e841fcff 4
+5632 [TopologyMain.main()] INFO  backtype.storm.daemon.supervisor  - Shut down 97725050-8c6e-41dc-8e15-3667e841fcff:11a4362f-1202-4b71-bc02-dddcbeb75b4b
+5633 [TopologyMain.main()] INFO  backtype.storm.daemon.supervisor  - Shutting down supervisor 97725050-8c6e-41dc-8e15-3667e841fcff
+5634 [Thread-11] INFO  backtype.storm.util  - Async loop interrupted!
+5638 [Thread-12] INFO  backtype.storm.util  - Async loop interrupted!
+5639 [Thread-13] INFO  backtype.storm.util  - Async loop interrupted!
+5639 [Thread-9] INFO  backtype.storm.event  - Event manager interrupted
+5639 [Thread-10] INFO  backtype.storm.event  - Event manager interrupted
+5641 [TopologyMain.main()] INFO  backtype.storm.testing  - Shutting down in process zookeeper
+5643 [TopologyMain.main()] INFO  backtype.storm.testing  - Done shutting down in process zookeeper
+5643 [TopologyMain.main()] INFO  backtype.storm.testing  - Deleting temporary path /tmp/f60ed7e2-72bc-41be-9dbf-4a407b3dd8ce
+5644 [TopologyMain.main()] INFO  backtype.storm.testing  - Deleting temporary path /tmp/0d2725a3-cf8d-42be-8914-c533f88ddc83
+5644 [TopologyMain.main()] INFO  backtype.storm.testing  - Deleting temporary path /tmp/ac991a35-6ff8-48f8-a9a8-d861a8c9b17a
+5645 [TopologyMain.main()] INFO  backtype.storm.testing  - Deleting temporary path /tmp/d4f2613a-ebb7-43e9-afe1-0132b73cd256
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  10.285 s
+[INFO] Finished at: 2021-05-07T19:35:10-07:00
+[INFO] ------------------------------------------------------------------------
